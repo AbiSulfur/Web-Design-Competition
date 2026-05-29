@@ -299,33 +299,7 @@ p {
 
 /* Background Tech Wireframe Effect */
 .bg-glow {
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 4px;
-  z-index: -1;
-  pointer-events: none;
-}
-.bg-glow::before {
-  content: '';
-  position: absolute;
-  top: -4px;
-  left: -4px;
-  width: 16px;
-  height: 16px;
-  border-top: 2px solid var(--secondary);
-  border-left: 2px solid var(--secondary);
-}
-.bg-glow::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  right: -4px;
-  width: 16px;
-  height: 16px;
-  border-bottom: 2px solid var(--secondary);
-  border-right: 2px solid var(--secondary);
+  display: none;
 }
 
 /* =========================================
