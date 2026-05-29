@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 4. Scroll Animations (Intersection Observer)
-    const animatedElements = document.querySelectorAll('.animate-up');
+    const animatedElements = document.querySelectorAll('.animate-up, .animate-fade');
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -421,6 +421,35 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 appendSystemMsg(`>> SYSTEM CRITICAL ERROR: Uplink failed. Details: ${err.message}. Check your API Key settings.`);
             }
+        });
+    }
+
+
+
+    // ==========================================
+    // FAQ ACCORDION LOGIC
+    // ==========================================
+    const faqItems = document.querySelectorAll('.faq-item');
+    if (faqItems.length > 0) {
+        faqItems.forEach(item => {
+            const questionBtn = item.querySelector('.faq-question');
+            questionBtn.addEventListener('click', () => {
+                const isOpen = item.classList.contains('active');
+
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                    const otherAnswer = otherItem.querySelector('.faq-answer');
+                    if (otherAnswer) otherAnswer.style.maxHeight = null;
+                });
+
+                // Toggle current item
+                if (!isOpen) {
+                    item.classList.add('active');
+                    const answer = item.querySelector('.faq-answer');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
         });
     }
 
