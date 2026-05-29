@@ -4,64 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Aethel</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="Meet the architects of the digital future. Discover the story, milestones, and visionary team behind Aethel's premium design consultancy.">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="bg-glow" style="top: 20%; left: -200px;"></div>
+    <!-- Interactive Background Glows -->
+    <div class="mouse-glow" id="mouseGlow"></div>
+    <div class="bg-glow-orb orb-1"></div>
+    <div class="bg-glow-orb orb-2"></div>
 
     <!-- NAVBAR -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container">
             <a href="index.html" class="logo">Aethel<span>.</span></a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <button class="mobile-menu-btn">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
 
     <!-- PAGE HEADER -->
-    <section style="padding: 12rem 0 5rem; text-align: center;">
+    <section style="padding: 13rem 0 4rem; text-align: center;">
         <div class="container animate-up">
-            <span class="subtitle">Our Story</span>
-            <h1>Architects of the <span class="text-gradient">Future</span></h1>
+            <div class="cyber-badge">
+                <i class="fas fa-terminal"></i> Core Manifest
+            </div>
+            <h1>Architects of the <span class="accent-text-cyan">Future</span></h1>
         </div>
     </section>
 
     <!-- ABOUT CONTENT -->
-    <section style="padding: 3rem 0;">
+    <section style="padding: 2rem 0 6rem;">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 5rem; align-items: center;">
                 <div class="animate-up delay-1">
-                    <div style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; position: relative;">
-                        <!-- Using an abstract placeholder from Unsplash -->
-                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Futuristic Concept" style="width: 100%; height: auto; display: block; opacity: 0.8; mix-blend-mode: luminosity;">
-                        <div style="position: absolute; inset: 0; background: rgba(7, 7, 12, 0.45);"></div>
+                    <div style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 24px; overflow: hidden; position: relative; padding: 0.5rem;">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Futuristic Tech Core" style="width: 100%; height: auto; display: block; border-radius: 20px; filter: hue-rotate(240deg) brightness(0.9);">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent, rgba(4, 4, 6, 0.45)); pointer-events: none;"></div>
                     </div>
                 </div>
                 
                 <div class="animate-up delay-2">
-                    <h2 style="margin-bottom: 1.5rem;">Beyond Traditional Portfolios</h2>
+                    <h2 style="margin-bottom: 1.8rem;">Beyond Traditional Portfolios</h2>
                     <p>At Aethel, we believe that design is not just about making things look beautiful; it's about engineering the future. Founded by visionaries in the tech and design space, we merge cutting-edge aesthetics with robust engineering.</p>
                     <p>Our mission aligns with the core philosophy: <strong>"Designing the Future: Beyond Portfolio, Build Your Legacy."</strong> We don't just deliver projects; we build digital legacies that elevate brands into industry leaders.</p>
                     
-                    <div style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                        <div style="border-left: 2px solid var(--primary); padding-left: 1rem;">
-                            <h3 class="text-gradient">Vision</h3>
-                            <p style="font-size: 0.95rem;">To pioneer the next era of digital interaction.</p>
+                    <div style="margin-top: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                        <div style="border-left: 2px solid var(--accent-cyan); padding-left: 1.2rem;">
+                            <h3 class="accent-text-cyan" style="font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.5rem;">Vision</h3>
+                            <p style="font-size: 0.95rem; margin: 0;">To pioneer the next era of digital interaction.</p>
                         </div>
-                        <div style="border-left: 2px solid var(--secondary); padding-left: 1rem;">
-                            <h3 class="text-gradient">Mission</h3>
-                            <p style="font-size: 0.95rem;">Empowering brands to leave a lasting digital footprint.</p>
+                        <div style="border-left: 2px solid var(--accent-purple); padding-left: 1.2rem;">
+                            <h3 class="accent-text-purple" style="font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.5rem;">Mission</h3>
+                            <p style="font-size: 0.95rem; margin: 0;">Empowering brands to leave a lasting digital footprint.</p>
                         </div>
                     </div>
                 </div>
@@ -69,21 +73,111 @@
         </div>
     </section>
 
-    <!-- STATS -->
-    <section style="padding: 5rem 0;">
+    <!-- TIMELINE PROGRESS MILESTONES -->
+    <section style="padding: 5rem 0 8rem; border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); background: rgba(255, 255, 255, 0.005);">
         <div class="container">
-            <div class="glass-card animate-up" style="display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; gap: 2rem;">
-                <div>
-                    <h2 class="text-gradient" style="font-size: 3.5rem; margin-bottom: 0;">150+</h2>
-                    <p style="text-transform: uppercase; letter-spacing: 1px;">Projects Delivered</p>
+            <div class="animate-up" style="text-align: center; margin-bottom: 5rem;">
+                <div class="cyber-badge" style="color: var(--accent-cyan);">
+                    <i class="fas fa-history"></i> Chronology
                 </div>
-                <div>
-                    <h2 class="text-gradient" style="font-size: 3.5rem; margin-bottom: 0;">12</h2>
-                    <p style="text-transform: uppercase; letter-spacing: 1px;">Global Awards</p>
+                <h2>Interactive <span class="accent-text-cyan">Milestones</span></h2>
+                <p style="max-width: 550px; margin: 0 auto;">Trace the evolution of digital artistry. Our continuous journey towards the vanguard of interactive engineering.</p>
+            </div>
+
+            <div class="timeline">
+                <!-- Item 1 -->
+                <div class="timeline-item animate-up delay-1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2023</div>
+                    <h3 style="margin-bottom: 0.6rem;">Protocol Initiated</h3>
+                    <p style="font-size: 1rem; margin: 0;">Aethel was born out of a collective urge to disrupt conventional visual paradigms. We set out to bridge the gap between creative visual architecture and spatial technology.</p>
                 </div>
-                <div>
-                    <h2 class="text-gradient" style="font-size: 3.5rem; margin-bottom: 0;">99%</h2>
-                    <p style="text-transform: uppercase; letter-spacing: 1px;">Client Satisfaction</p>
+
+                <!-- Item 2 -->
+                <div class="timeline-item animate-up delay-2">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2024</div>
+                    <h3 style="margin-bottom: 0.6rem;">Decentralized Integration</h3>
+                    <p style="font-size: 1rem; margin: 0;">Expanding into Web3 frontends, crafting responsive dApp environments that transformed complex decentralized smart contract networks into friendly UI experiences.</p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="timeline-item animate-up delay-3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2025</div>
+                    <h3 style="margin-bottom: 0.6rem;">Cognitive UI Integration</h3>
+                    <p style="font-size: 1rem; margin: 0;">Fusing generative artificial intelligence systems directly into user workflows, enabling UI screens to adapt real-time based on predictive analytics and user intent.</p>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="timeline-item animate-up delay-4">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2026</div>
+                    <h3 style="margin-bottom: 0.6rem;">Immersive Legacy</h3>
+                    <p style="font-size: 1rem; margin: 0;">Leading the charge in spatial computing layouts and integrated tech consulting. Delivering pixel-perfect digital ecosystems that stand as permanent legacies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEET THE TEAM SECTION -->
+    <section style="padding: 8rem 0 4rem;">
+        <div class="container">
+            <div class="animate-up" style="text-align: center; margin-bottom: 6rem;">
+                <div class="cyber-badge" style="color: var(--accent-purple);">
+                    <i class="fas fa-users-viewfinder"></i> Crew
+                </div>
+                <h2>Aethel <span class="accent-text-purple">Commanders</span></h2>
+                <p style="max-width: 550px; margin: 0 auto;">The visionary designers, developers, and computational architects engineering tomorrow's interfaces.</p>
+            </div>
+
+            <div class="team-grid">
+                <!-- Member 1 -->
+                <div class="team-card animate-up delay-1">
+                    <div class="team-img-wrapper">
+                        <div class="team-scanner-overlay"></div>
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Aria Vance" class="team-img">
+                    </div>
+                    <h3 style="margin-bottom: 0.3rem;">Aria Vance</h3>
+                    <p style="color: var(--accent-cyan); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.8rem;">Chief Design Officer</p>
+                    <p style="font-size: 0.95rem; line-height: 1.5;">Award-winning interactive spatial designer specializing in holographic UX patterns.</p>
+                    <div class="team-socials">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="team-card animate-up delay-2">
+                    <div class="team-img-wrapper">
+                        <div class="team-scanner-overlay"></div>
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kaelen Sterling" class="team-img">
+                    </div>
+                    <h3 style="margin-bottom: 0.3rem;">Kaelen Sterling</h3>
+                    <p style="color: var(--accent-purple); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.8rem;">Lead Web3 Architect</p>
+                    <p style="font-size: 0.95rem; line-height: 1.5;">Engineering real-time high-throughput decentralized protocols with immersive visual frameworks.</p>
+                    <div class="team-socials">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="team-card animate-up delay-3">
+                    <div class="team-img-wrapper">
+                        <div class="team-scanner-overlay"></div>
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Silas Thorne" class="team-img">
+                    </div>
+                    <h3 style="margin-bottom: 0.3rem;">Silas Thorne</h3>
+                    <p style="color: var(--accent-cyan); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.8rem;">AI Integration Lead</p>
+                    <p style="font-size: 0.95rem; line-height: 1.5;">Structuring adaptive, cognitive user interfaces driven by neural networks and predictive logic.</p>
+                    <div class="team-socials">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -93,11 +187,11 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-brand">
+                <div class="footer-brand animate-up">
                     <a href="index.html" class="logo">Aethel<span>.</span></a>
                     <p>Designing the future, one pixel at a time. We build legacies that transcend ordinary portfolios.</p>
                 </div>
-                <div class="footer-links">
+                <div class="footer-links animate-up delay-1">
                     <h4>Navigation</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -106,7 +200,7 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-links">
+                <div class="footer-links animate-up delay-2">
                     <h4>Connect</h4>
                     <ul>
                         <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
@@ -122,6 +216,44 @@
         </div>
     </footer>
 
+    <!-- CHATBOT WIDGET -->
+    <div class="chat-widget" id="chatWidget">
+        <button class="chat-bubble" id="chatBubble" aria-label="Open AI Assistant">
+            <i class="fas fa-comment-alt"></i>
+        </button>
+
+        <div class="chat-panel" id="chatPanel">
+            <div class="chat-header">
+                <div style="display: flex; align-items: center; gap: 0.8rem;">
+                    <div class="status-dot" style="background: #22c55e; animation: pulseNeon 1.5s infinite; width: 8px; height: 8px; border-radius: 50%;"></div>
+                    <div>
+                        <h4 style="margin: 0; font-family: monospace; font-size: 0.85rem; letter-spacing: 1px;">AETHEL_CORE.EXE</h4>
+                        <span style="font-size: 0.7rem; color: var(--text-muted);">AI Assistant</span>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.8rem; align-items: center;">
+                    <button class="chat-close-btn" id="chatCloseBtn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chat Messages Container -->
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-msg system">
+                    Inti Kognitif Aethel aktif. Bagaimana saya dapat membantu merancang warisan digital Anda?
+                </div>
+            </div>
+
+            <!-- Chat Input Form -->
+            <form class="chat-input-area" id="chatInputArea">
+                <input type="text" id="chatInput" placeholder="Kirim transmisi..." required autocomplete="off">
+                <button type="submit" id="chatSendBtn"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Custom Scripts -->
     <script src="js/script.js"></script>
 </body>
 </html>

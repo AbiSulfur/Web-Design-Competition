@@ -4,72 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aethel | Designing the Future</title>
-    <!-- Google Fonts: Outfit -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="Aethel is a next-generation tech and digital design consultancy crafting immersive spatial interfaces, AI integration platforms, and decentralized Web3 ecosystems.">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="bg-glow"></div>
+    <!-- Interactive Background Glows -->
+    <div class="mouse-glow" id="mouseGlow"></div>
+    <div class="bg-glow-orb orb-1"></div>
+    <div class="bg-glow-orb orb-2"></div>
 
     <!-- NAVBAR -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container">
             <a href="index.html" class="logo">Aethel<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <button class="mobile-menu-btn">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <section class="hero" style="padding: 15rem 0 10rem; text-align: center; position: relative;">
-        <div class="container animate-up">
-            <span class="subtitle">Welcome to Aethel</span>
-            <h1 style="margin-bottom: 2rem;">Designing the Future:<br> <span class="text-gradient">Beyond Portfolio, Build Your Legacy</span></h1>
-            <p style="max-width: 600px; margin: 0 auto 3rem; font-size: 1.2rem;">
-                We are a digital and tech design consultancy crafting immersive experiences, Web3 interfaces, and AI-driven solutions that stand the test of time.
-            </p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="portfolio.html" class="btn btn-primary">Explore Our Works</a>
-                <a href="contact.html" class="btn btn-outline">Start Your Legacy</a>
+    <section class="hero" style="padding: 14rem 0 6rem; position: relative;">
+        <div class="container" style="text-align: center;">
+            <div class="animate-up">
+                <div class="cyber-badge">
+                    <i class="fas fa-satellite-dish"></i> System Protocol Active
+                </div>
+                <h1 style="margin-bottom: 2rem;">
+                    Designing the Future:<br> 
+                    <span class="accent-text-cyan">Beyond Portfolio, Build Your Legacy</span>
+                </h1>
+                <p style="max-width: 650px; margin: 0 auto 3.5rem; font-size: 1.2rem;">
+                    We are a digital and tech design consultancy crafting immersive experiences, Web3 interfaces, and AI-driven solutions that stand the test of time.
+                </p>
+                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="portfolio.html" class="btn btn-primary">
+                        Explore Our Works <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="contact.html" class="btn btn-outline">
+                        Start Your Legacy <i class="fas fa-bolt"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- HIGHLIGHT SECTION -->
-    <section class="highlights" style="padding: 5rem 0;">
+    <!-- INFINITE TEXT TRACK MARQUEE -->
+    <div class="marquee-container animate-up delay-1">
+        <div class="marquee-content">
+            <div class="marquee-text">AI Integration <span>•</span> Immersive UI/UX <span>•</span> Web3 Ecosystems <span>•</span> Spatial Design <span>•</span> Digital Legacy <span>•</span></div>
+            <div class="marquee-text">AI Integration <span>•</span> Immersive UI/UX <span>•</span> Web3 Ecosystems <span>•</span> Spatial Design <span>•</span> Digital Legacy <span>•</span></div>
+        </div>
+    </div>
+
+    <!-- SERVICES / HIGHLIGHTS SECTION -->
+    <section style="padding: 5rem 0 7rem;">
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            <div class="animate-up" style="text-align: center; margin-bottom: 5rem;">
+                <div class="cyber-badge" style="color: var(--accent-purple);">
+                    <i class="fas fa-shield-halved"></i> Capabilities
+                </div>
+                <h2>Next-Generation <span class="accent-text-purple">Architectures</span></h2>
+                <p style="max-width: 580px; margin: 0 auto;">Pioneering interfaces that transcend flat screens. We engineer interactions designed for the next digital frontier.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
                 
+                <!-- Service 1 -->
                 <div class="glass-card animate-up delay-1">
-                    <i class="fas fa-brain text-gradient" style="font-size: 2.5rem; margin-bottom: 1.5rem;"></i>
-                    <h3>AI Integration</h3>
+                    <i class="fas fa-brain accent-text-cyan" style="font-size: 2.8rem; margin-bottom: 2rem;"></i>
+                    <h3 style="margin-bottom: 1rem;">AI Integration</h3>
                     <p>Fusing artificial intelligence with human-centric design to create interfaces that adapt, learn, and evolve with your audience.</p>
                 </div>
 
+                <!-- Service 2 -->
                 <div class="glass-card animate-up delay-2">
-                    <i class="fas fa-cube text-gradient" style="font-size: 2.5rem; margin-bottom: 1.5rem;"></i>
-                    <h3>Immersive UI/UX</h3>
+                    <i class="fas fa-cube accent-text-purple" style="font-size: 2.8rem; margin-bottom: 2rem;"></i>
+                    <h3 style="margin-bottom: 1rem;">Immersive UI/UX</h3>
                     <p>Breaking the boundaries of traditional web design. We build immersive spatial layouts that redefine user interaction.</p>
                 </div>
 
+                <!-- Service 3 -->
                 <div class="glass-card animate-up delay-3">
-                    <i class="fas fa-globe text-gradient" style="font-size: 2.5rem; margin-bottom: 1.5rem;"></i>
-                    <h3>Web3 Ecosystems</h3>
+                    <i class="fas fa-globe accent-text-cyan" style="font-size: 2.8rem; margin-bottom: 2rem;"></i>
+                    <h3 style="margin-bottom: 1rem;">Web3 Ecosystems</h3>
                     <p>Designing decentralized applications (dApps) with intuitive frontends, bridging the gap between complex logic and user adoption.</p>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- STATISTICS SECTION -->
+    <section style="padding: 2rem 0 8rem;">
+        <div class="container">
+            <div class="glass-card animate-up">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="150">0</div>
+                        <div class="stat-title">Projects Delivered</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="12">0</div>
+                        <div class="stat-title">Global Awards</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="99">0</div>
+                        <div class="stat-title">Client Satisfaction %</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -107,7 +159,44 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- CHATBOT WIDGET -->
+    <div class="chat-widget" id="chatWidget">
+        <button class="chat-bubble" id="chatBubble" aria-label="Open AI Assistant">
+            <i class="fas fa-comment-alt"></i>
+        </button>
+
+        <div class="chat-panel" id="chatPanel">
+            <div class="chat-header">
+                <div style="display: flex; align-items: center; gap: 0.8rem;">
+                    <div class="status-dot" style="background: #22c55e; animation: pulseNeon 1.5s infinite; width: 8px; height: 8px; border-radius: 50%;"></div>
+                    <div>
+                        <h4 style="margin: 0; font-family: monospace; font-size: 0.85rem; letter-spacing: 1px;">AETHEL_CORE.EXE</h4>
+                        <span style="font-size: 0.7rem; color: var(--text-muted);">AI Assistant</span>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.8rem; align-items: center;">
+                    <button class="chat-close-btn" id="chatCloseBtn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chat Messages Container -->
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-msg system">
+                    Inti Kognitif Aethel aktif. Bagaimana saya dapat membantu merancang warisan digital Anda?
+                </div>
+            </div>
+
+            <!-- Chat Input Form -->
+            <form class="chat-input-area" id="chatInputArea">
+                <input type="text" id="chatInput" placeholder="Kirim transmisi..." required autocomplete="off">
+                <button type="submit" id="chatSendBtn"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Custom Scripts -->
     <script src="js/script.js"></script>
 </body>
 </html>

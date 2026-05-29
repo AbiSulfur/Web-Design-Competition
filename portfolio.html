@@ -4,159 +4,182 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Aethel</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="Explore a curated selection of Aethel's interactive digital legacies, Web3 systems, generative AI hubs, and immersive spatial frontends.">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
-        }
-        .project-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            overflow: hidden;
-            position: relative;
-            transition: all 0.4s ease;
-        }
-        .project-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--secondary);
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
-        }
-        .project-img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        .project-card:hover .project-img {
-            transform: scale(1.05);
-        }
-        .project-content {
-            padding: 2rem;
-        }
-        .project-tag {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            color: #ffffff;
-            padding: 0.3rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-            display: inline-block;
-        }
-    </style>
 </head>
 <body>
-    <div class="bg-glow" style="top: 10%; right: 10%;"></div>
+    <!-- Interactive Background Glows -->
+    <div class="mouse-glow" id="mouseGlow"></div>
+    <div class="bg-glow-orb orb-1"></div>
+    <div class="bg-glow-orb orb-2"></div>
 
     <!-- NAVBAR -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container">
             <a href="index.html" class="logo">Aethel<span>.</span></a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <button class="mobile-menu-btn">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
 
     <!-- PAGE HEADER -->
-    <section style="padding: 12rem 0 3rem; text-align: center;">
+    <section style="padding: 13rem 0 3rem; text-align: center;">
         <div class="container animate-up">
-            <span class="subtitle">Our Works</span>
-            <h1>Our <span class="text-gradient">Legacy</span></h1>
-            <p style="max-width: 600px; margin: 1rem auto 0;">Explore a curated selection of our futuristic designs, immersive experiences, and next-generation applications.</p>
+            <div class="cyber-badge">
+                <i class="fas fa-cubes"></i> Archives
+            </div>
+            <h1>Our <span class="accent-text-cyan">Legacy</span></h1>
+            <p style="max-width: 600px; margin: 1.5rem auto 0; font-size: 1.15rem;">Explore a curated selection of our futuristic designs, immersive experiences, and next-generation applications.</p>
         </div>
     </section>
 
-    <!-- PORTFOLIO GRID -->
-    <section style="padding: 2rem 0 6rem;">
+    <!-- PORTFOLIO / FILTER SECTION -->
+    <section style="padding: 2rem 0 8rem;">
         <div class="container">
-            <div class="portfolio-grid">
+            
+            <!-- Dynamic Filters -->
+            <div class="portfolio-filters animate-up delay-1">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web3">Web3 dApp</button>
+                <button class="filter-btn" data-filter="ai">AI Interface</button>
+                <button class="filter-btn" data-filter="immersive">Immersive Web</button>
+                <button class="filter-btn" data-filter="fintech">Fintech App</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid" id="portfolioGrid">
                 
-                <!-- Item 1 -->
-                <div class="project-card animate-up delay-1">
-                    <div style="overflow: hidden;">
+                <!-- Project 1 -->
+                <div class="project-card glass-card animate-up delay-1" data-category="web3">
+                    <div class="project-media">
+                        <div class="project-overlay">
+                            <div class="project-info-btn"><i class="fas fa-expand-alt"></i></div>
+                        </div>
                         <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nexus Protocol" class="project-img">
                     </div>
-                    <div class="project-content">
+                    <div class="project-tags">
                         <span class="project-tag">Web3 dApp</span>
-                        <h3>Nexus Protocol</h3>
-                        <p style="font-size: 0.95rem;">A decentralized finance dashboard with real-time neon analytics and an immersive dark mode interface.</p>
-                        <a href="#" class="text-gradient" style="font-weight: 600; font-size: 0.9rem;">View Case Study <i class="fas fa-arrow-right"></i></a>
                     </div>
+                    <h3 style="margin-bottom: 0.8rem;">Nexus Protocol</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 2rem;">A decentralized finance dashboard with real-time neon analytics and an immersive dark mode interface.</p>
+                    <a href="#" class="accent-text-cyan case-study-trigger" style="font-weight: 700; font-size: 0.9rem;"
+                       data-title="Nexus Protocol" 
+                       data-tag="Web3 dApp"
+                       data-img="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                       data-desc="Nexus Protocol is a cutting-edge decentralized finance dashboard. It features real-time, zero-latency WebSockets analytics, high-contrast neon data visualizations, and an ultra-secure decentralized layout. The frontend achieves cognitive ease by using dynamic color-coding and customized grid systems that adapt to the trader's trading style. Fully integrated with multi-chain smart contracts.">
+                        View Case Study <i class="fas fa-arrow-right" style="margin-left: 0.3rem;"></i>
+                    </a>
                 </div>
 
-                <!-- Item 2 -->
-                <div class="project-card animate-up delay-2">
-                    <div style="overflow: hidden;">
+                <!-- Project 2 -->
+                <div class="project-card glass-card animate-up delay-2" data-category="ai">
+                    <div class="project-media">
+                        <div class="project-overlay">
+                            <div class="project-info-btn"><i class="fas fa-expand-alt"></i></div>
+                        </div>
                         <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Aura AI" class="project-img">
                     </div>
-                    <div class="project-content">
+                    <div class="project-tags">
                         <span class="project-tag">AI Interface</span>
-                        <h3>Aura AI Companion</h3>
-                        <p style="font-size: 0.95rem;">Voice-driven AI assistant dashboard utilizing spatial design and interactive micro-animations.</p>
-                        <a href="#" class="text-gradient" style="font-weight: 600; font-size: 0.9rem;">View Case Study <i class="fas fa-arrow-right"></i></a>
                     </div>
+                    <h3 style="margin-bottom: 0.8rem;">Aura AI Companion</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 2rem;">Voice-driven AI assistant dashboard utilizing spatial design and interactive micro-animations.</p>
+                    <a href="#" class="accent-text-purple case-study-trigger" style="font-weight: 700; font-size: 0.9rem;"
+                       data-title="Aura AI Companion"
+                       data-tag="AI Interface"
+                       data-img="https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                       data-desc="Aura AI is a voice-controlled personal artificial intelligence interface. Built using advanced spatial audio elements and micro-animations, the user interface mimics natural conversational flows. Its cognitive engine visualizes live neural mapping and voice wave frequencies, providing a gorgeous, fluid experience that bridges technical output with human intimacy.">
+                        View Case Study <i class="fas fa-arrow-right" style="margin-left: 0.3rem;"></i>
+                    </a>
                 </div>
 
-                <!-- Item 3 -->
-                <div class="project-card animate-up delay-3">
-                    <div style="overflow: hidden;">
+                <!-- Project 3 -->
+                <div class="project-card glass-card animate-up delay-3" data-category="immersive">
+                    <div class="project-media">
+                        <div class="project-overlay">
+                            <div class="project-info-btn"><i class="fas fa-expand-alt"></i></div>
+                        </div>
                         <img src="https://images.unsplash.com/photo-1544256718-3bcf237f3974?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cyber City" class="project-img">
                     </div>
-                    <div class="project-content">
+                    <div class="project-tags">
                         <span class="project-tag">Immersive Web</span>
-                        <h3>CyberCity Metaverse</h3>
-                        <p style="font-size: 0.95rem;">A 3D promotional landing page for a virtual real estate platform, built with WebGL and Three.js elements.</p>
-                        <a href="#" class="text-gradient" style="font-weight: 600; font-size: 0.9rem;">View Case Study <i class="fas fa-arrow-right"></i></a>
                     </div>
+                    <h3 style="margin-bottom: 0.8rem;">CyberCity Metaverse</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 2rem;">A 3D promotional landing page for a virtual real estate platform, built with WebGL and Three.js elements.</p>
+                    <a href="#" class="accent-text-cyan case-study-trigger" style="font-weight: 700; font-size: 0.9rem;"
+                       data-title="CyberCity Metaverse"
+                       data-tag="Immersive Web"
+                       data-img="https://images.unsplash.com/photo-1544256718-3bcf237f3974?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                       data-desc="CyberCity Metaverse is an immersive 3D promotional landing page designed to showcase futuristic properties. Built on custom WebGL shaders and Three.js engines, it renders detailed architectural models in real-time. Features interactive scrolling cameras, fluid transitions, and glassmorphic HUD telemetry that simulates virtual reality directly inside any modern mobile or desktop browser.">
+                        View Case Study <i class="fas fa-arrow-right" style="margin-left: 0.3rem;"></i>
+                    </a>
                 </div>
 
-                <!-- Item 4 -->
-                <div class="project-card animate-up delay-1">
-                    <div style="overflow: hidden;">
+                <!-- Project 4 -->
+                <div class="project-card glass-card animate-up delay-4" data-category="fintech">
+                    <div class="project-media">
+                        <div class="project-overlay">
+                            <div class="project-info-btn"><i class="fas fa-expand-alt"></i></div>
+                        </div>
                         <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Quantum Crypto" class="project-img">
                     </div>
-                    <div class="project-content">
+                    <div class="project-tags">
                         <span class="project-tag">Fintech App</span>
-                        <h3>Quantum Crypto</h3>
-                        <p style="font-size: 0.95rem;">Next-generation trading platform prioritizing data visualization and cognitive ease.</p>
-                        <a href="#" class="text-gradient" style="font-weight: 600; font-size: 0.9rem;">View Case Study <i class="fas fa-arrow-right"></i></a>
                     </div>
+                    <h3 style="margin-bottom: 0.8rem;">Quantum Crypto</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 2rem;">Next-generation trading platform prioritizing data visualization and cognitive ease.</p>
+                    <a href="#" class="accent-text-purple case-study-trigger" style="font-weight: 700; font-size: 0.9rem;"
+                       data-title="Quantum Crypto"
+                       data-tag="Fintech App"
+                       data-img="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                       data-desc="Quantum Crypto is an elite fintech dashboard engineered for instant order routing and clear volume profiles. The layout utilizes custom-drawn canvas charts, dynamic HSL colors to indicate asset movements, and glass-card modular layouts that allow traders to drag-and-drop their widgets. Optimised for sub-millisecond execution dashboards.">
+                        View Case Study <i class="fas fa-arrow-right" style="margin-left: 0.3rem;"></i>
+                    </a>
                 </div>
 
             </div>
-            
-            <div style="text-align: center; margin-top: 4rem;" class="animate-up">
-                <a href="contact.html" class="btn btn-primary">Start A Project With Us</a>
+
+            <div style="text-align: center; margin-top: 6rem;" class="animate-up">
+                <a href="contact.html" class="btn btn-primary">
+                    Start A Project With Us <i class="fas fa-satellite"></i>
+                </a>
             </div>
+
         </div>
     </section>
+
+    <!-- CASE STUDY MODAL OVERLAY -->
+    <div class="modal-overlay" id="projectModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            <img src="" alt="" class="modal-img" id="modalImg">
+            <div class="project-tags">
+                <span class="project-tag" id="modalTag"></span>
+            </div>
+            <h2 id="modalTitle" style="margin-top: 1.5rem; margin-bottom: 1rem;"></h2>
+            <p id="modalDesc" style="line-height: 1.7; font-size: 1.05rem;"></p>
+        </div>
+    </div>
 
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-brand">
+                <div class="footer-brand animate-up">
                     <a href="index.html" class="logo">Aethel<span>.</span></a>
                     <p>Designing the future, one pixel at a time. We build legacies that transcend ordinary portfolios.</p>
                 </div>
-                <div class="footer-links">
+                <div class="footer-links animate-up delay-1">
                     <h4>Navigation</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -165,7 +188,7 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-links">
+                <div class="footer-links animate-up delay-2">
                     <h4>Connect</h4>
                     <ul>
                         <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
@@ -181,6 +204,44 @@
         </div>
     </footer>
 
+    <!-- CHATBOT WIDGET -->
+    <div class="chat-widget" id="chatWidget">
+        <button class="chat-bubble" id="chatBubble" aria-label="Open AI Assistant">
+            <i class="fas fa-comment-alt"></i>
+        </button>
+
+        <div class="chat-panel" id="chatPanel">
+            <div class="chat-header">
+                <div style="display: flex; align-items: center; gap: 0.8rem;">
+                    <div class="status-dot" style="background: #22c55e; animation: pulseNeon 1.5s infinite; width: 8px; height: 8px; border-radius: 50%;"></div>
+                    <div>
+                        <h4 style="margin: 0; font-family: monospace; font-size: 0.85rem; letter-spacing: 1px;">AETHEL_CORE.EXE</h4>
+                        <span style="font-size: 0.7rem; color: var(--text-muted);">AI Assistant</span>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.8rem; align-items: center;">
+                    <button class="chat-close-btn" id="chatCloseBtn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chat Messages Container -->
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-msg system">
+                    Inti Kognitif Aethel aktif. Bagaimana saya dapat membantu merancang warisan digital Anda?
+                </div>
+            </div>
+
+            <!-- Chat Input Form -->
+            <form class="chat-input-area" id="chatInputArea">
+                <input type="text" id="chatInput" placeholder="Kirim transmisi..." required autocomplete="off">
+                <button type="submit" id="chatSendBtn"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Custom Scripts -->
     <script src="js/script.js"></script>
 </body>
 </html>
