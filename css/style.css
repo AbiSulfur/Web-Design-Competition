@@ -1857,8 +1857,8 @@ p  { line-height: 1.85; }
 .hero-cinematic .hero-body {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: clamp(8rem, 18vw, 14rem) 0 clamp(4rem, 8vw, 7rem);
+  justify-content: center;
+  padding: clamp(6rem, 12vw, 8rem) 0 clamp(4rem, 8vw, 7rem);
 }
 
 .hero-cinematic .hero-display {
